@@ -14,9 +14,9 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 			//The URL of the resource that is protected by Basic HTTP Authentication.
-			$infoServer = '52.187.166.10:18083/api/v3/brokers';
-			$listClient = '52.187.166.10:18083/api/v3/connections/';
-			$listSubscribe = '52.187.166.10:18083/api/v3/subscriptions/';
+			$infoServer = '52.230.96.106:18083/api/v3/brokers';
+			$listClient = '52.230.96.106:18083/api/v3/connections/';
+			$listSubscribe = '52.230.96.106:18083/api/v3/subscriptions/';
 			//Your username.
 			$username = 'admin';
 			

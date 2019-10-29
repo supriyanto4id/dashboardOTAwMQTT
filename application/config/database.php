@@ -7,10 +7,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '52.230.96.106:8066',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'otamqtt',
+	'password' => '12345',
+	'database' => 'otawmqtt',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

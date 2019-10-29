@@ -38,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script>
 
-var hostname ="52.187.166.10";
+var hostname ="52.230.96.106";
 var port = 8083;
 // Create a client instance
 client = new Paho.MQTT.Client(hostname, Number(port), "clientId");

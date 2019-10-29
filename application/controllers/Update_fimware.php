@@ -38,8 +38,8 @@ class Update_fimware extends CI_Controller {
     public function do_upload($id_penguna) {
 
           $config['upload_path']          = 'asset/uploads/';
-          $config['allowed_types']        = 'bin';
-          $config['max_size']             = 300;
+          $config['allowed_types']        = 'bin|txt';
+          $config['max_size']             = 1050;
          
 
           $this->load->library('upload', $config);
@@ -125,7 +125,8 @@ class Update_fimware extends CI_Controller {
   
          $host = $this->input->post('host_server');
          $port = $this->input->post('port_server');
-         $client = new Mosquitto\Client();
+        echo "sukses publish"; 
+	$client = new Mosquitto\Client();
          $client->connect($host, $port, 5);
 
          while (true) {
@@ -142,11 +143,14 @@ class Update_fimware extends CI_Controller {
                    }
                     sleep(2);
               }
+//	$this->session->set_flashdata('message', 'sukses publish file .bin');
+  //        redirect(site_url('Update_fimware'));
+
 
           $client->disconnect();
           unset($client);
-          $this->session->set_flashdata('message', 'sukses publish file .bin');
-          redirect(site_url('update_fimware'));
+//          $this->session->set_flashdata('message', 'sukses publish file .bin');
+  //        redirect(site_url('update_fimware'));
     }
 
     
